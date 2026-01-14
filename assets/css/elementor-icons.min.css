@@ -4,9 +4,9 @@
   src: url(../fonts/eicons.eot?5.45.0);
   src: url(../fonts/eicons.eot?5.45.0#iefix) format("embedded-opentype"),
     url('../fonts/eicons.woff2') format("woff2"),
-    url(../fonts/eicons.woff?5.45.0) format("woff"),
-    url(../fonts/eicons.ttf?5.45.0) format("truetype"),
-    url(../fonts/eicons.svg?5.45.0#eicon) format("svg");
+    url(../fonts/eicons.woff) format("woff"),
+    url(../fonts/eicons.ttf) format("truetype"),
+    url(../fonts/eicons.svg) format("svg");
   font-weight: 400;
   font-style: normal;
 }

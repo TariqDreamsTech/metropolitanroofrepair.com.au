@@ -14,10 +14,10 @@
 }
 @font-face {
   font-family: gform-icons-theme;
-  src: url("../../../fonts/gform-icons-theme.woff2?o6rzdt") format("woff2"),
-    url("../../../fonts/gform-icons-theme.ttf?o6rzdt") format("truetype"),
-    url("../../../fonts/gform-icons-theme.woff?o6rzdt") format("woff"),
-    url("../../../fonts/gform-icons-theme.svg?o6rzdt#gform-icons-theme")
+  src: url("../../../fonts/gform-icons-theme.woff2") format("woff2"),
+    url("../../../fonts/gform-icons-theme.ttf") format("truetype"),
+    url("../../../fonts/gform-icons-theme.woff") format("woff"),
+    url("../../../fonts/gform-icons-theme.svg")
       format("svg");
   font-weight: 400;
   font-style: normal;
