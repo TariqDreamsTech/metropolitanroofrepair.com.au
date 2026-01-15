@@ -1,0 +1,172 @@
+/* Responsive Patch for Mobile Devices and Smaller Screens */
+
+/* Base reset for overflow to prevent horizontal scroll */
+html,
+body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+}
+
+/* Fluid images and media */
+img,
+iframe,
+video,
+object,
+embed {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Custom Mobile Contact Widget - Hidden by Default on Desktop/Tablet */
+.custom-mobile-contact-widget {
+    display: none !important;
+}
+
+/* Elementor Specific Responsive Overrides */
+@media screen and (max-width: 1024px) {
+
+    .elementor-section,
+    .elementor-column,
+    .elementor-container,
+    .elementor-row,
+    .elementor-widget-wrap,
+    .elementor-element {
+        max-width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    /* Force containers to wrap and be full width */
+    .elementor-container {
+        flex-wrap: wrap !important;
+        width: 100% !important;
+    }
+
+    .elementor-column {
+        width: 100% !important;
+        flex-basis: 100% !important;
+    }
+
+    .elementor-widget-wrap {
+        padding: 10px !important;
+        /* Add some breathing room */
+    }
+
+    /* Ensure forms don't overflow */
+    input,
+    textarea,
+    select,
+    .gform_wrapper {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Fix for common Elementor issues */
+    .elementor-section-boxed>.elementor-container {
+        width: 100% !important;
+    }
+
+    /* Header Logo and Contact Info Side-by-Side */
+    .elementor-element-fe56cd1 .elementor-widget-wrap {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        /* Pack to left */
+    }
+
+    /* Resize Logo to make space */
+    .elementor-element-fe56cd1 .elementor-widget-image {
+        width: 50% !important;
+        max-width: 150px !important;
+        /* Limit logo size */
+    }
+
+    /* Custom Contact Widget Styling */
+    .custom-mobile-contact-widget {
+        display: block !important;
+        /* Force show on mobile */
+        width: auto !important;
+        /* Let it shrink/grow */
+        margin-left: 15px !important;
+        /* Increased margin for spacing */
+    }
+
+    .custom-mobile-contact-widget ul {
+        text-align: right !important;
+        /* Right align text */
+        padding: 0 !important;
+        margin: 0 !important;
+        list-style: none !important;
+    }
+
+    .custom-mobile-contact-widget li {
+        margin-bottom: 2px !important;
+    }
+
+    .custom-mobile-contact-widget a {
+        font-size: 10px !important;
+        /* Smaller text for mobile */
+        color: #000 !important;
+        /* Ensure visible */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        line-height: 1.2 !important;
+    }
+
+    .custom-mobile-contact-widget .elementor-icon-list-icon {
+        margin-right: 3px !important;
+        color: #d81b1b !important;
+        /* Red icon color */
+    }
+
+    .custom-mobile-contact-widget .elementor-icon-list-icon i {
+        font-size: 12px !important;
+    }
+
+    /* Force Header Columns to be Side-by-Side (Logo+Contact | Menu) */
+    .elementor-element-7b899c0 .elementor-container {
+        flex-wrap: nowrap !important;
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+
+    /* Column 1 (Logo + Contact) */
+    .elementor-element-fe56cd1 {
+        width: 85% !important;
+        /* Take up most space */
+        flex-basis: auto !important;
+    }
+
+    /* Column 2 (Menu) */
+    .elementor-element-6be87a2 {
+        width: 15% !important;
+        /* Menu takes remaining space */
+        flex-basis: auto !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+        padding-right: 15px !important;
+        /* Shift Menu Left from edge */
+    }
+
+    /* Menu takes remaining space */
+    flex-basis: auto !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+
+/* Adjust Menu Toggle to fit */
+.elementor-element-7c8ee9f .elementor-menu-toggle {
+    margin: 0 !important;
+    font-size: 20px !important;
+    /* Slightly smaller icon if needed */
+}
+
+/* Hide the original top bar on mobile again to prevent duplicate */
+.elementor-element-6f387a3 {
+    display: none !important;
+}
+}
